@@ -1,0 +1,35 @@
+.task {
+    padding: 20px;
+    display: flex;
+    background-color: rgb(119, 176, 226);
+    color: white;
+    border-radius: 8px;
+    margin: 4px;
+    transition: .2s;
+}
+
+.task input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.task label {
+    font-weight: bold;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    background-color: rgb(141, 177, 209);
+}
+
+.date{
+    padding: 5px 10px;
+    border-radius: 15px;
+    background-color: rgb(163, 205, 241);
+
+}
+.deadline {
+    background-color: rgb(120, 153, 164);
+    color: white;
+    border-radius: 3px;
+    padding: 2px 4px;
+}
