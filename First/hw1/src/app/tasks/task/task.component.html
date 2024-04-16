@@ -1,7 +1,7 @@
 <li class="task" (click)="toggleCompleted()" style="position: relative;">
     {{task.Name}}
     @if(task.Date != null){
-        <span class="deadline">{{task.Date.getDate()}}:{{task.Date.getMonth()+1}}:{{task.Date.getFullYear()}}</span>
+        <span class="deadline">{{ getFormattedDate(task.Date) }}</span>
     }
     <div style="text-align: center;">
         <button style="font-size: 20px; color: darkred;" (click)="onDelete()">

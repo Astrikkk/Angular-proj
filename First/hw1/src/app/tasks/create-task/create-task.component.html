@@ -1,0 +1,15 @@
+<h2>Create New Task</h2>
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <label>
+        <span>Name: </span>
+        <input type="text" formControlName="Name">
+    </label>
+    <label>
+        <span>Email: </span>
+        <input type="date" formControlName="Date">
+    </label>
+    <div class="col-2">
+        <button type="reset">Cancel</button>
+        <button type="submit">Create</button>
+    </div>
+</form>

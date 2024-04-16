@@ -26,4 +26,11 @@ export class TaskComponent {
   toggleCompleted() {
     this.task.isCompleted = !this.task.isCompleted;
   }
+
+  getFormattedDate(date: any): string {
+    if (!(date instanceof Date)) {
+      return '';
+    }
+    return `${date.getDate()}:${date.getMonth() + 1}:${date.getFullYear()}`;
+  }
 }

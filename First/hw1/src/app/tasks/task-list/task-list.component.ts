@@ -2,13 +2,14 @@ import { Component } from '@angular/core';
 import { TaskComponent } from '../task/task.component';
 import { ITask } from '../ITask';
 import { TASKS } from '../task-mock';
+import { CreateTaskComponent } from '../create-task/create-task.component';
 
 @Component({
   selector: 'app-task-list',
   standalone: true,
   templateUrl: './task-list.component.html',
   styleUrl: './task-list.component.css',
-  imports: [TaskComponent]
+  imports: [TaskComponent, CreateTaskComponent]
 })
 export class TaskListComponent {
   tasks: ITask[] = [...TASKS];
@@ -24,6 +25,10 @@ export class TaskListComponent {
   deleteTask(id: number) {
     let index = this.tasks.findIndex(x => x.id == id);
     this.tasks.splice(index, 1);
+  }
+
+  createTask(user: ITask) {
+    this.tasks.push(user);
   }
 
   SortByName() {
